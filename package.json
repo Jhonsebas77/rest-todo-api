@@ -1,0 +1,22 @@
+{
+  "name": "rest-todo-api",
+  "version": "1.0.0",
+  "description": "Todo REST API: A simple node/express API exercise",
+  "scripts": {
+    "test": "NODE_ENV=development jest --coverage",
+    "test:watch": "NODE_ENV=development jest --watch",
+    "tsc": "tsc",
+    "mkdir-dist": "rm -rf dist && mkdir dist",
+    "cp-to-dist": "gulp copy-to-dist",
+    "ts-node": "ts-node --inspect=5858 src/index.ts",
+    "nodemon": "nodemon --exec 'ts-node --cache-directory .tscache' ./src/index.ts",
+    "build": "npm run mkdir-dist && npm run tsc && npm run cp-to-dist",
+    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "NODE_ENV=development clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
+    "postinstall": "npm run build"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:juansoos/rest-todo-api",
+  "author": "Julian Sotelo",
+  "license": "MIT"
+}
