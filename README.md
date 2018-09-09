@@ -1,6 +1,6 @@
 # rest-todo-api
 
-REST Todo API: A simple node/express API exercise.
+REST Todo API: A simple node/express API exercise. [![Build Status](https://travis-ci.org/juansoos/rest-todo-api.svg?branch=master)](https://travis-ci.org/juansoos/rest-todo-api)
 
 ### Quick start
 
