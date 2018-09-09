@@ -24,4 +24,4 @@ $ npm start
 
 ## License
 
-This project is licensed under MIT License - see the [LICENSE.md](https://github.com/juansoos/rest-todo-api/blob/master/LICENSE.md) file for details
+This project is licensed under MIT License - see the [LICENSE.md](https://github.com/juansoos/rest-todo-api/blob/master/LICENSE) file for details
