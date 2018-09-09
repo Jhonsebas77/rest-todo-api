@@ -11,6 +11,11 @@ export class Core {
         this.middleware.use(...args)
         return this
     }
+    public mountMiddleware(middlewares: any) {
+        Object.keys(middlewares).forEach((key) => {
+            this.middleware.use(middlewares[key].mountPoint, middlewares[key].handler)
+        })
+    }
     public listen(port: any, listeningListener: () => void | undefined) {
         this.middleware.listen(port, listeningListener)
     }
