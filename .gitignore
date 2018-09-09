@@ -6,6 +6,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Lock
+yarn.lock
+package-lock
+
+# Build
+dist
+
 # Runtime data
 pids
 *.pid
