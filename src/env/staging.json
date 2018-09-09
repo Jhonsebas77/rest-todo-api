@@ -1,0 +1,7 @@
+{
+    "server": {
+        "env": "staging",
+        "port": 4000,
+        "database": {}
+    }
+}
