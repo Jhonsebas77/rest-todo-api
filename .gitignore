@@ -6,6 +6,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Ts cache
+.tscache
+
 # Lock
 yarn.lock
 package-lock
