@@ -17,11 +17,11 @@ export class Core {
         })
     }
     public listen(port: any, listeningListener: () => void | undefined) {
-        this.middleware.listen(process.env.PORT, listeningListener)
+        this.middleware.listen(port, listeningListener)
     }
     public startServer() {
         this.listen(
-            (this.configuration as any).port,
+            process.env.PORT || (this.configuration as any).port,
             () => console.log(`Server Running at localhost:${process.env.PORT}`)
         )
     }
