@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Todo REST API: A simple node/express API exercise",
   "scripts": {
-    "test": "NODE_ENV=development jest",
+    "test": "NODE_ENV=development jest --coverage --detectOpenHandles --forceExit",
     "test:watch": "NODE_ENV=development jest --watch",
     "tsc": "tsc",
     "mkdir-dist": "rm -rf dist && mkdir dist",
