@@ -22,7 +22,7 @@ export class Core {
     public startServer() {
         this.listen(
             (this.configuration as any).port,
-            () => console.log(`Server Running at localhost:${(this.configuration as any).port}`)
+            () => console.log(`Server Running at localhost:${process.env.PORT}`)
         )
     }
 }
