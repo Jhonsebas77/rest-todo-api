@@ -1,1 +1,1 @@
-web: npm run start-pr
+worker: npm run start-pr
