@@ -17,7 +17,7 @@ export class Core {
         })
     }
     public listen(port: any, listeningListener: () => void | undefined) {
-        this.middleware.listen(port, listeningListener)
+        this.middleware.listen(process.env.PORT || port, listeningListener)
     }
     public startServer() {
         this.listen(
