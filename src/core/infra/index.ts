@@ -1,4 +1,5 @@
 import config from 'config'
+import { Database } from '../../database/connection'
 import { ExpressApp } from '../app'
 export class Core {
     public middleware: any
@@ -20,6 +21,12 @@ export class Core {
         this.middleware.listen(port, listeningListener)
     }
     public startServer() {
+        Database.connect(
+            (this.configuration as any).user,
+            (this.configuration as any).pwd,
+            (this.configuration as any).db,
+            process.env.MONGODB_URI),
+        Database.debug(true)
         this.listen(
             process.env.PORT || (this.configuration as any).port,
             () => console.log(`Server Running at localhost:${process.env.PORT}`)

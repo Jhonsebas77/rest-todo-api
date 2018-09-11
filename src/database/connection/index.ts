@@ -1,11 +1,11 @@
 import mongoose from 'mongoose'
 mongoose.Promise = global.Promise
 export class Database {
-    public static connect(user: string, password: string, db: string) {
+    public static connect(user: string, password: string, db: string, uri?: string) {
         try {
-            mongoose.connect(`mongodb://${user}:${password}@${db}`)
+            mongoose.connect(uri || `mongodb://${user}:${password}@${db}`)
         } catch (error) {
-            mongoose.createConnection(`mongodb://${user}:${password}@${db}`)
+            mongoose.createConnection(uri || `mongodb://${user}:${password}@${db}`)
         }
         mongoose.connection
             .once('open', () => console.log('MongoDB connection success'))
