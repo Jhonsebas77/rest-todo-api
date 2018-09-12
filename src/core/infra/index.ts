@@ -22,14 +22,14 @@ export class Core {
     }
     public startServer() {
         Database.connect(
-            (this.configuration as any).user,
-            (this.configuration as any).pwd,
-            (this.configuration as any).db,
+            (this.configuration as any).database.user,
+            (this.configuration as any).database.pwd,
+            (this.configuration as any).database.db,
             process.env.MONGODB_URI),
         Database.debug(true)
         this.listen(
             process.env.PORT || (this.configuration as any).port,
-            () => console.log(`Server Running at localhost:${process.env.PORT}`)
+            () => console.log(`Server Running at localhost:${process.env.PORT || (this.configuration as any).port}`)
         )
     }
 }
