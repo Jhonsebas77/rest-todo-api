@@ -2,6 +2,10 @@
     "server": {
         "env": "development",
         "port": 4000,
-        "database": {}
+        "database": {
+            "user": "root",
+            "pwd": "fuwdfgheduajwkrmiytft5nwhpZvdsasbpbBEce~jkdzznijim",
+            "db": "ds255282.mlab.com:55282/example-todo"
+        }
     }
 }
