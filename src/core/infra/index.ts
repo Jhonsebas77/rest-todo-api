@@ -24,8 +24,7 @@ export class Core {
         Database.connect(
             (this.configuration as any).database.user,
             (this.configuration as any).database.pwd,
-            (this.configuration as any).database.db,
-            process.env.MONGODB_URI),
+            (this.configuration as any).database.db),
         Database.debug(true)
         this.listen(
             process.env.PORT || (this.configuration as any).port,
