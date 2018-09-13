@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 mongoose.Promise = global.Promise
 export class Database {
-    public static connect(user: string, password: string, db: string, uri?: string) {
+    public static connect(user: string, password: string, db: string, uri: string) {
         try {
             mongoose.connect(uri || `mongodb://${user}:${password}@${db}`, { useNewUrlParser: true })
         } catch (error) {
