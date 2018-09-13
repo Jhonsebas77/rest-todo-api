@@ -5,7 +5,7 @@
   "scripts": {
     "test": "NODE_ENV=development jest --coverage --detectOpenHandles --forceExit",
     "test:watch": "NODE_ENV=development jest --watch",
-    "preinstall": "rm -rf node_modules && rm -rf package-lock.json",
+    "preinstall": "rm -rf node_modules && rm -rf package-lock.json && npm install -g typescript",
     "tsc": "tsc",
     "mkdir-dist": "rm -rf dist && mkdir dist",
     "cp-to-dist": "gulp copy-to-dist",
